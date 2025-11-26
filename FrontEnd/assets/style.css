@@ -184,7 +184,12 @@ nav ul {
 
 nav li {
 	padding: 0 10px;
-	font-size: 1.2em;
+	font-size: 19px;
+}
+
+nav li img {
+	width: 22px;
+	height: 22px;
 }
 
 li:hover {

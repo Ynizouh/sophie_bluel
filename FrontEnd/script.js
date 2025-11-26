@@ -19,7 +19,6 @@ fetch("http://localhost:5678/api/works")
 fetch("http://localhost:5678/api/categories")
     .then((response) => response.json())
     .then((categories) => {
-        
         const allButton = document.createElement("button");
         allButton.textContent = "Tous";
         allButton.dataset.categoryId = "all";
@@ -49,6 +48,15 @@ fetch("http://localhost:5678/api/categories")
     })
     .catch((error) => {
         console.error("Erreur API Categories:", error);
+    });
+
+fetch("http://localhost:5678/api/users/login")
+    .then((response) => response.json())
+    .then((data) => {
+        console.log("User login data:", data);
+    })
+    .catch((error) => {
+        console.error("Erreur API Users Login:", error);
     });
 
 function displayWorks(works) {
